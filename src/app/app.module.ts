@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import {AlertModule} from 'ng2-bootstrap/ng2-bootstrap';
+import { MovieListComponent } from './movies/movie-list/movie-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    NavBarComponent,
+    MovieListComponent,
   ],
   imports: [
     AlertModule.forRoot(),
