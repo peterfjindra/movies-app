@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -10,6 +10,7 @@ import { MovieListComponent } from './movies/movie-list/movie-list.component';
 import { PageNotFoundComponent } from './errors/404/404.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './routes';
+import { LoginComponent } from './users/login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,11 +18,13 @@ import { routes } from './routes';
     NavBarComponent,
     MovieListComponent,
     PageNotFoundComponent,
+    LoginComponent,
   ],
   imports: [
     AlertModule.forRoot(),
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     RouterModule.forRoot(routes),
   ],
