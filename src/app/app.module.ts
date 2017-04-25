@@ -7,18 +7,23 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import {AlertModule} from 'ng2-bootstrap/ng2-bootstrap';
 import { MovieListComponent } from './movies/movie-list/movie-list.component';
+import { PageNotFoundComponent } from './errors/404/404.component';
+import { RouterModule } from '@angular/router';
+import { routes } from './routes';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     MovieListComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     AlertModule.forRoot(),
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]
