@@ -4,10 +4,12 @@ $nav-txt: #fafbfc;
 nav {
     background-color: $nav-bgd;
     color: $nav-txt;
-    
+    border: 0px;
+    font-size: 16px; 
+
     a:hover {
         color: #FFFFFF;
-        background-color: #363636;   
+        background-color: #363636;
     }
 }
 
@@ -15,4 +17,6 @@ nav {
     float: right;
     right: 0;
     position: fixed;
+    padding-left: 10px;
+    padding-right: 10px;
 }

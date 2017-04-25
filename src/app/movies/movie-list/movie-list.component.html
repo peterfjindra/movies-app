@@ -1,5 +1,7 @@
-<h1>Movies</h1>
+<h1> Movies</h1>
 
 <ul *ngFor="let movie of movies"> 
-  <li><p>{{movie.title}}, {{movie.year}} -- {{movie.director}}</p></li>
+  <div class="well hoverwell col-md-9">
+    <p>{{movie.title}}, {{movie.year}} -- {{movie.director}}</p>
+  </div>
 </ul>

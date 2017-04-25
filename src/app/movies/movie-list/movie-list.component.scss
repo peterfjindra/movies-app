@@ -1,0 +1,16 @@
+$text-color: ghostwhite;
+
+h1 {
+    color: $text-color;
+    padding-left: 40px;
+}
+
+div {
+    background-color: #3366CC;
+    p {
+        color: $text-color;
+    }
+    border-radius: 1px;
+    outline-color: #4d79ff;
+    border: 0px;
+}
