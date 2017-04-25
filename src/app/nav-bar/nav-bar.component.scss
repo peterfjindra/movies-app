@@ -1,3 +1,16 @@
+$nav-bgd: #24292e;
+$nav-txt: #fafbfc;
+
+nav {
+    background-color: $nav-bgd;
+    color: $nav-txt;
+    
+    a:hover {
+        color: #FFFFFF;
+        background-color: #363636;   
+    }
+}
+
 .login {
     float: right;
     right: 0;

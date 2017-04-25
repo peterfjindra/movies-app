@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { User } from '../user';
 
 @Component({
+    moduleId: module.id,
     selector: 'app-login',
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.scss']
@@ -28,7 +29,6 @@ export class LoginComponent implements OnInit {
     cancel() {
         this.router.navigateByUrl('/');
     }
-
 }
 
 const USERS: User[] = [
