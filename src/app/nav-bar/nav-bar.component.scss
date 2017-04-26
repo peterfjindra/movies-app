@@ -7,16 +7,33 @@ nav {
     border: 0px;
     font-size: 16px; 
 
+    a {
+        color: $nav-txt;
+
+    }
     a:hover {
+        color: #FFFFFF;
+        background-color: #363636;
+    }
+
+    div:hover {
         color: #FFFFFF;
         background-color: #363636;
     }
 }
 
 .login {
-    float: right;
-    right: 0;
-    position: fixed;
-    padding-left: 10px;
-    padding-right: 10px;
+    // float: right;
+    // right: 0;
+    // position: fixed;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.logout {
+    // float: right;
+    // right: 0;
+    // position: fixed;
+    padding-left: 0px;
+    padding-right: 0px;
 }

@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     login() {
         this.auth.loginUser(this.userName, this.password);
         if (this.auth.isAuthenticated()) {
-            this.router.navigateByUrl(`/user/${this.auth.currentUser.id}`);
+            this.auth.goToUserPage();
         } else {
             this.loginFailed = true;
         }

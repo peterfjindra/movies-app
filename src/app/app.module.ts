@@ -15,6 +15,7 @@ import { UserPageComponent } from './users/user-page/user-page.component';
 import { UserPageResolverService } from './users/user-page/user-page-resolver.service';
 import { UserService } from './users/user.service';
 import { AuthService } from 'app/users/auth.service';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AuthService } from 'app/users/auth.service';
     PageNotFoundComponent,
     LoginComponent,
     UserPageComponent,
+    WelcomeComponent,
   ],
   imports: [
     AlertModule.forRoot(),

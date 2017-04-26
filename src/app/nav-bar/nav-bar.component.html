@@ -1,13 +1,17 @@
 <nav class="navbar navbar-default"> 
   <ul class="nav navbar-nav">
     <li>
-        <a href="#">Home</a>
+      <a [routerLink]="['']">Home</a>
     </li>
     <li>
-        <a href="#">Movie List</a>
+      <a [routerLink]="['movies']">Movie List</a>
     </li>
-    <li class="login">
-      <a href="#">Login</a>
+    <li class="login container-fluid navbar-right hover">
+      <a *ngIf="!auth.isAuthenticated()" [routerLink]="['login']">Login</a>
+      <a *ngIf="auth.isAuthenticated()" [routerLink] (click)="auth.goToUserPage()">Welcome, {{auth.currentUser.username}}!</a>
+    </li>
+    <li class="logout container-fluid navbar-right hover">
+      <a class="container-fluid" *ngIf="auth.isAuthenticated()" [routerLink] (click)="auth.logout()">Logout</a>
     </li>
   </ul>
 </nav>
