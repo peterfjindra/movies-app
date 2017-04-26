@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { IUser } from '../user';
+import { AuthService } from 'app/users/auth.service';
 
 @Component({
     moduleId: module.id,
@@ -9,20 +10,23 @@ import { IUser } from '../user';
     styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+    loginFailed: boolean;
+    userName: string;
+    password: string;
 
-    constructor( private router: Router) { }
+    constructor(private router: Router,
+                private auth: AuthService) { }
 
     ngOnInit() {
+        this.loginFailed = false;
     }
 
-    login(loginValues) {
-        if (loginValues.username !== null && loginValues.password !== null) {
-            // tslint:disable-next-line:no-use-before-declare
-            if  (USERS.findIndex(u => u.password === loginValues.password && u.username === loginValues.username) > -1) {
-                this.router.navigateByUrl('/movies');
-            } else {
-                alert('This user does not exist!');
-            }
+    login() {
+        this.auth.loginUser(this.userName, this.password);
+        if (this.auth.isAuthenticated()) {
+            this.router.navigateByUrl(`/user/${this.auth.currentUser.id}`);
+        } else {
+            this.loginFailed = true;
         }
     }
 
@@ -31,17 +35,17 @@ export class LoginComponent implements OnInit {
     }
 }
 
-const USERS: IUser[] = [
-        {
-            id: 1,
-            username: 'jpapa',
-            password: 'pass',
-            favoriteMovies: []
-        },
-        {
-            id: 2,
-            username: 'pjindra',
-            password: 'guest',
-            favoriteMovies: []
-        }
-    ];
+// const USERS: IUser[] = [
+//         {
+//             id: 1,
+//             username: 'jpapa',
+//             password: 'pass',
+//             favoriteMovies: []
+//         },
+//         {
+//             id: 2,
+//             username: 'pjindra',
+//             password: 'guest',
+//             favoriteMovies: []
+//         }
+//     ];

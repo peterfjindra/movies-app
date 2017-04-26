@@ -14,6 +14,7 @@ import { LoginComponent } from './users/login/login.component';
 import { UserPageComponent } from './users/user-page/user-page.component';
 import { UserPageResolverService } from './users/user-page/user-page-resolver.service';
 import { UserService } from './users/user.service';
+import { AuthService } from 'app/users/auth.service';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { UserService } from './users/user.service';
   providers: [
       UserService,
       UserPageResolverService,
+      AuthService,
   ],
   bootstrap: [AppComponent]
 })
