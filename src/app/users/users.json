@@ -1,0 +1,16 @@
+{
+    "users": [
+    {
+        "id": 1,
+        "username": "jpapa",
+        "password": "pass",
+        "favoriteMovies": []
+    },
+    {
+        "id:": 2,
+        "username": "pjindra",
+        "password": "guest",
+        "favoriteMovies": []
+    }
+    ]
+}

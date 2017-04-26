@@ -11,6 +11,9 @@ import { PageNotFoundComponent } from './errors/404/404.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './routes';
 import { LoginComponent } from './users/login/login.component';
+import { UserPageComponent } from './users/user-page/user-page.component';
+import { UserPageResolverService } from './users/user-page/user-page-resolver.service';
+import { UserService } from './users/user.service';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,7 @@ import { LoginComponent } from './users/login/login.component';
     MovieListComponent,
     PageNotFoundComponent,
     LoginComponent,
+    UserPageComponent,
   ],
   imports: [
     AlertModule.forRoot(),
@@ -28,7 +32,10 @@ import { LoginComponent } from './users/login/login.component';
     HttpModule,
     RouterModule.forRoot(routes),
   ],
-  providers: [],
+  providers: [
+      UserService,
+      UserPageResolverService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

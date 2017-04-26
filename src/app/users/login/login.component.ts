@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from '../user';
+import { IUser } from '../user';
 
 @Component({
     moduleId: module.id,
@@ -31,13 +31,17 @@ export class LoginComponent implements OnInit {
     }
 }
 
-const USERS: User[] = [
+const USERS: IUser[] = [
         {
+            id: 1,
             username: 'jpapa',
-            password: 'pass'
+            password: 'pass',
+            favoriteMovies: []
         },
         {
+            id: 2,
             username: 'pjindra',
-            password: 'guest'
+            password: 'guest',
+            favoriteMovies: []
         }
     ];
