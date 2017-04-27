@@ -14,7 +14,7 @@
         <a *ngIf="auth.isAuthenticated()" [routerLink] (click)="auth.goToUserPage()">Welcome, {{auth.currentUser.username}}!</a>
       </li>
       <li class="logout container-fluid navbar-right hover">
-        <a class="container-fluid" *ngIf="auth.isAuthenticated()" [routerLink] (click)="auth.logout()">Logout</a>
+        <a class="container-fluid" *ngIf="auth.isAuthenticated()" [routerLink]="['']" (click)="auth.logout()">Logout</a>
       </li>
     </ul>
   </div>

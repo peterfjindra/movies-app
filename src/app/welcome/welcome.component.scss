@@ -1,6 +1,24 @@
 $text-color: ghostwhite;
 
 h1 {
-    color: $text-color;
-    padding-left: 40px;
+    //color: $text-color;
+    margin-left: 30%;
+    margin-right: 30%;
+    //padding-left: 40px;
+}
+
+button {
+    //margin-left: 40px;
+    background-color: orangered;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+button:hover {
+    background-color: orange;
+}
+
+header {
+    background-position: center center;
+    text-align: center;
 }
