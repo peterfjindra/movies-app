@@ -4,7 +4,7 @@
         "id": 1,
         "username": "jpapa",
         "password": "pass",
-        "favoriteMovies": []
+        "favoriteMovies": [2,3]
     },
     {
         "id": 2,

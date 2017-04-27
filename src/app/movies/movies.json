@@ -1,0 +1,22 @@
+{
+    "movies": [
+        {
+            "id": 1,
+            "title": "Pulp Fiction",
+            "year": 1994,
+            "director": "Quentin Tarantino"
+        },
+        {
+            "id": 2,
+            "title": "There Will Be Blood",
+            "year": 2007,
+            "director": "Paul Thomas Anderson"
+        },
+        {
+            "id": 3,
+            "title": "Wolf Children",
+            "year": 2013,
+            "director": "Mamoru Hosoda"
+        }
+    ]
+}

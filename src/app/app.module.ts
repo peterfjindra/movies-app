@@ -16,6 +16,8 @@ import { UserPageResolverService } from './users/user-page/user-page-resolver.se
 import { UserService } from './users/user.service';
 import { AuthService } from 'app/users/auth.service';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { MovieThumbnailComponent } from './movies/movie-thumbnail/movie-thumbnail.component';
+import { MoviesService } from 'app/movies/movies.service';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     LoginComponent,
     UserPageComponent,
     WelcomeComponent,
+    MovieThumbnailComponent,
   ],
   imports: [
     AlertModule.forRoot(),
@@ -39,6 +42,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
       UserService,
       UserPageResolverService,
       AuthService,
+      MoviesService,
   ],
   bootstrap: [AppComponent]
 })

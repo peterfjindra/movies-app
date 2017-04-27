@@ -1,7 +1,9 @@
 <h1>Movies</h1>
 
 <ul *ngFor="let movie of movies"> 
-  <div class="well hoverwell col-md-9">
-    <p>{{movie.title}}, {{movie.year}} -- {{movie.director}}</p>
-  </div>
+  <movie-thumbnail [movieId]="movie.id"></movie-thumbnail>
+  
+  <!--<div class="well hoverwell col-md-9">
+    <p>{{movie.title}}, {{movie.year}} {{movie.director}}</p>
+  </div>-->
 </ul>

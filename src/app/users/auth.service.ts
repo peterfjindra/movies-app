@@ -17,7 +17,7 @@ export class AuthService implements OnInit {
         if (userName !== null && password !== null) {
             // tslint:disable-next-line:no-use-before-declare
             let tempUser: IUser;
-            for (let i = 0; i < data.users.length; i++){
+            for (let i = 0; i < data.users.length; i++) {
                 tempUser = <IUser>data.users[i];
                 if (tempUser.username === userName && tempUser.password === password) {
                     this.currentUser = tempUser;

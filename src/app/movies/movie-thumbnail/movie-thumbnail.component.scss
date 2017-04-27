@@ -1,0 +1,12 @@
+$text-color: ghostwhite;
+$well-color: #3366CC;
+
+div {
+    background-color: $well-color;
+    p {
+        color: $text-color;
+    }
+    border-radius: 0px;
+    outline-color: $well-color;
+    border: 0px;
+}

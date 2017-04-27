@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Movie } from '../movie';
+import { IMovie } from '../movie';
+import { MoviesService } from 'app/movies/movies.service';
 
 @Component({
     selector: 'movie-list',
@@ -7,28 +8,11 @@ import { Movie } from '../movie';
     styleUrls: ['./movie-list.component.scss']
 })
 export class MovieListComponent implements OnInit {
-    movies: Movie[];
-    constructor() { }
+    movies: IMovie[];
 
+    constructor(private moviesService: MoviesService) { }
 
     ngOnInit() {
-        this.movies = [
-            {
-                title: 'Pulp Fiction',
-                year: 1994,
-                director: 'Quentin Tarantino'
-            },
-            {
-                title: 'There Will Be Blood',
-                year: 2007,
-                director: 'Paul Thomas Anderson'
-            },
-            {
-                title: 'Wolf Children',
-                year: 2013,
-                director: 'Mamoru Hosoda'
-            }
-        ];
+        this.movies = this.moviesService.getMovies();
     }
-
 }
