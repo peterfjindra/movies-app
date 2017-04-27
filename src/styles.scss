@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+$text-color: ghostwhite;
+
+h1 {
+    color: $text-color !important;
+    padding-left: 40px;
+}
+
+a, label {
+    color: $text-color !important;
+}

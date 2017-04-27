@@ -12,28 +12,26 @@ nav {
 
     }
     a:hover {
-        color: #FFFFFF;
         background-color: #363636;
     }
 
-    div:hover {
-        color: #FFFFFF;
-        background-color: #363636;
+    li {
+        padding-left: 0px;
+        padding-right: 0px;
     }
+
+    .navbar-right {
+        margin-right: 10px;
+    }
+
 }
 
 .login {
-    // float: right;
-    // right: 0;
-    // position: fixed;
     padding-left: 0px;
     padding-right: 0px;
 }
 
 .logout {
-    // float: right;
-    // right: 0;
-    // position: fixed;
     padding-left: 0px;
     padding-right: 0px;
 }
