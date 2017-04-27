@@ -3,21 +3,25 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { MovieListComponent,
+         MovieThumbnailComponent,
+         MoviesService,
+} from './movies/index';
+
+import { LoginComponent,
+         UserPageComponent,
+         UserPageResolverService,
+         UserService,
+         AuthService,
+} from './users/index';
+
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import {AlertModule} from 'ng2-bootstrap/ng2-bootstrap';
-import { MovieListComponent } from './movies/movie-list/movie-list.component';
+import { AlertModule} from 'ng2-bootstrap/ng2-bootstrap';
 import { PageNotFoundComponent } from './errors/404/404.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './routes';
-import { LoginComponent } from './users/login/login.component';
-import { UserPageComponent } from './users/user-page/user-page.component';
-import { UserPageResolverService } from './users/user-page/user-page-resolver.service';
-import { UserService } from './users/user.service';
-import { AuthService } from 'app/users/auth.service';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { MovieThumbnailComponent } from './movies/movie-thumbnail/movie-thumbnail.component';
-import { MoviesService } from 'app/movies/movies.service';
 
 @NgModule({
   declarations: [
